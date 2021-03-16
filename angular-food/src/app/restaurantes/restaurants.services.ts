@@ -13,6 +13,6 @@ export class RestaurantServices{
     constructor(private http: HttpClient){}
 
     restaurants(): Observable <Restaurant[]>{
-        return this.http.get<Restaurant[]>(`${BASE_URL_API}/restaurants`)
+        return this.http.get<Restaurant[]>(`${BASE_URL_API}restaurants`)
     }
 }
