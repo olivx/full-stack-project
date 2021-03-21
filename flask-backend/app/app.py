@@ -2,6 +2,8 @@ from importlib import import_module
 
 from flask import Flask
 
+from .commands.init_data import loadata
+
 
 def load_apps(app):
     for flask_app in app.config.get('FLASK_APPS'):
@@ -18,6 +20,8 @@ def load_extensions(app):
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('settings.py')
+
+    app.cli.add_command(loadata)
 
     load_extensions(app)
     load_apps(app)
