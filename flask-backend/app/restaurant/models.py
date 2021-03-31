@@ -19,7 +19,19 @@ class Restaurant(db.Model):
     def __str__(self):
         return self.name
 
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
 
 class RestaurantSerializer(ma.Schema):
     class Meta:
-        fields = ('name', 'category')
+        fields = (
+            'name',
+            'category',
+            'category',
+            'deliveryEstimate',
+            'rating',
+            'imagePath',
+            'about', 'hours',
+        )
