@@ -14,8 +14,12 @@ export class RestaurantesComponent implements OnInit {
   restaurants: Restaurant[] = []
   
   ngOnInit(): void {
-    this.RestaurantServices.restaurants().subscribe(restaurants => {
-      this.restaurants = restaurants
+    this.RestaurantServices.restaurants().subscribe(
+      (restaurants) => {
+        this.restaurants = restaurants
+    }, 
+    (error) => {
+      console.log(error);
     })
   }
 
