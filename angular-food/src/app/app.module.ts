@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { RestaurantComponent } from './restaurantes/restaurant/restaurant.component';
 import { RestaurantServices } from './restaurantes/restaurants.services';
+import { RestaurantDetailComponent } from './restaurantes/restaurant-detail/restaurant-detail.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RestaurantServices } from './restaurantes/restaurants.services';
     HomeComponent,
     AboutComponent,
     RestaurantesComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    RestaurantDetailComponent
   ],
   imports: [
     BrowserModule,
