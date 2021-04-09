@@ -8,8 +8,6 @@ import { Restaurant } from "./restaurant/restaurant.model";
 @Injectable()
 export class RestaurantServices{
 
-    rests: Restaurant[] = [
-    ]
     constructor(private http: HttpClient){}
 
     restaurants(): Observable <Restaurant[]>{
