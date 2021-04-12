@@ -1,7 +1,8 @@
 <div class="col-md-9 col-xs-12">
- <food-restaurant-menu-item 
-    *ngFor="let item  of menuItems|async" 
-    [menuItem]="item" > 
+  <food-restaurant-menu-item 
+    (addMenuItem)="addMenuItem($event)" 
+    *ngFor="let item  of menuItems|async"
+    [menuItem]="item">
   </food-restaurant-menu-item>
 </div>
 
